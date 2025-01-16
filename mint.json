@@ -48,10 +48,20 @@
         "widget-integration/quick-start-guide",
         {
           "group": "Methods",
-          "pages": ["widget-integration/methods/info", "widget-integration/methods/initOrg", "widget-integration/methods/initUser", "widget-integration/methods/connect", "widget-integration/methods/disconnect"]
+          "icon": "code",
+          "pages": [
+            "widget-integration/methods/info",
+            "widget-integration/methods/initOrg",
+            "widget-integration/methods/initUser",
+            "widget-integration/methods/connect",
+            "widget-integration/methods/disconnect"
+          ]
         }
       ]
     }
   ],
-  "footerSocials": {}
+  "footerSocials": {},
+  "metadata": {
+    "robots": "noindex"
+  }
 }
