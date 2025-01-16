@@ -1,0 +1,57 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "PingBase",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#34A974",
+    "light": "#49c78e",
+    "dark": "#288259",
+    "anchors": {
+      "from": "#288259",
+      "to": "#49c78e"
+    }
+  },
+  "background": {
+    "style": "windows"
+  },
+  "topbarLinks": [
+    {
+      "name": "Homepage",
+      "url": "https://www.pingbase.ai"
+    }
+  ],
+  "tabs": [],
+  "anchors": [],
+  "font": {
+    "headings": {
+      "family": "Inter"
+    },
+    "body": {
+      "family": "Inter"
+    }
+  },
+  "sidebar": {
+    "items": "border"
+  },
+  "navigation": [
+    {
+      "group": "",
+      "pages": ["general/introduction"]
+    },
+    {
+      "group": "Widget Integration",
+      "pages": [
+        "widget-integration/quick-start-guide",
+        {
+          "group": "Methods",
+          "pages": ["widget-integration/methods/info", "widget-integration/methods/initOrg", "widget-integration/methods/initUser", "widget-integration/methods/connect", "widget-integration/methods/disconnect"]
+        }
+      ]
+    }
+  ],
+  "footerSocials": {}
+}

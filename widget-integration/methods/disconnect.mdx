@@ -1,0 +1,17 @@
+---
+title: disconnect - Disonnects the User
+description: ''
+---
+
+### `disconnect`: PingBase("disconnect")
+
+* This method allows you to programmatically hide the PingBase integration in your web app.
+* Use `connect` to show the PingBase integration and `disconnect` to hide it from your web app.
+
+```typescript {3}
+import PingBase from '@pingbase/connect/PingBase';
+
+PingBase("disconnect")
+```
+
+Disconnects the user from PingBase. Can be used to hide the widget upon logout.

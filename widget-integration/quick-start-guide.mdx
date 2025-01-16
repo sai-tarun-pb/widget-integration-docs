@@ -1,0 +1,74 @@
+---
+title: Quick Start Guide
+description: 'Embed PingBase Connect into your Platform'
+---
+
+1. During the last step of organization onboarding, you will receive your unique "ORG_TOKEN" for your organization.
+2. Copy the script tag below and paste it at the top of the `<head></head>` tag in your web app HTML
+
+```html index.html
+<script id="ping-base-script" type="text/javascript" src="https://pingbasecdn.blob.core.windows.net/pb-connect/prod/main.js" defer></script>
+```
+
+3. Integrate PingBase into your web app
+
+Installing pingbase connect using NPM or Yarn
+
+<CodeGroup>
+    ```bash NPM
+npm install @pingbase/connect
+```
+
+    ```bash Yarn
+yarn install @pingbase/connect
+```
+</CodeGroup>
+
+## Importing and using PingBase widget in your web app
+
+Once you have installed the package using NPM or Yarn, you can import PingBase using the code below
+
+```typescript
+import PingBase from '@pingbase/connect/PingBase';
+```
+
+#### Sample Usage:
+
+```typescript
+import PingBase from '@pingbase/connect/PingBase';
+
+// Assuming that onMount is called on first render
+const onMount = () => {
+    PingBase("initOrg", <ORG_TOKEN>, {
+        autoConnect: false
+    })
+}
+
+// Assuming that onLogin is called once user login to your webapp
+const onLogin = () => {
+    PingBase("initUser", "name@company.com", "Roger", "Federer", "Free Trial", {
+        role: "User Role",
+        company: "User Company",
+        isNewUser: true,
+    })
+}
+
+// Assuming that onShow is called once user login to your webapp and onLogin is called.
+const onShow = () => {
+    PingBase("connect")
+}
+
+// Assuming that onHide is called whenever you want to disconnect the user. Ex: onLogout
+const onHide = () => {
+    PingBase("disconnect")
+}
+```
+
+<Card
+  title="Methods"
+  icon="code"
+  href="/widget-integration/methods/info"
+  horizontal
+>
+  A detailed description of the methods available for integrating the Widget.
+</Card>

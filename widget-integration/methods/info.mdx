@@ -1,0 +1,124 @@
+---
+title: Methods and it's uses
+description: ''
+---
+
+We have exposed several methods to initialize the organization, initialize the user, connect, or disconnect PingBase.
+
+## Methods:
+
+<AccordionGroup>
+    <Accordion title="initOrg">
+    `initOrg` : Initializes the organization for connection.
+
+    Usage:
+    ```typescript {3}
+import PingBase from '@pingbase/connect/PingBase';
+
+PingBase("initOrg", "ORG_TOKEN", options?)
+```
+
+Detailed Description:
+<Card
+    title="initOrg"
+    icon="code"
+    href="/widget-integration/methods/initOrg"
+    horizontal
+  >
+    Initializes the organization for connection.
+  </Card>
+    </Accordion>
+    <Accordion title="initUser">
+    `initUser` : Initializes the user for connection. This should be called upon user login.
+
+    Usage:
+    ```typescript {3}
+import PingBase from '@pingbase/connect/PingBase';
+
+PingBase("initUser", "email", "firstName", "lastName", "trialType", customMetadata?, widgetOptions?)
+```
+
+Detailed Description:
+<Card
+    title="initUser"
+    icon="code"
+    href="/widget-integration/methods/initUser"
+    horizontal
+  >
+    Initializes the user for connection. This should be called upon user login.
+  </Card>
+    </Accordion>
+    <Accordion title="connect">
+    `connect` : Connects the user to PingBase. This is used only when `autoConnect` option in `initOrg` is set to `false`.
+
+    Usage:
+    ```typescript {3}
+import PingBase from '@pingbase/connect/PingBase';
+
+PingBase("connect", widgetOptions?)
+```
+
+Detailed Description:
+<Card
+    title="connect"
+    icon="code"
+    href="/widget-integration/methods/connect"
+    horizontal
+  >
+    Connects the user to PingBase. This is used only when `autoConnect` option in `initOrg` is set to `false`.
+  </Card>
+    </Accordion>
+    <Accordion title="disconnect">
+    `disconnect`: Disconnects the user from PingBase. Can be used to hide the widget upon logout.
+
+    Usage:
+    ```typescript {3}
+import PingBase from '@pingbase/connect/PingBase';
+
+PingBase("disconnect")
+```
+
+Detailed Description:
+<Card
+    title="disconnect"
+    icon="code"
+    href="/widget-integration/methods/disconnect"
+    horizontal
+  >
+    Disconnects the user from PingBase. Can be used to hide the widget upon logout.
+  </Card>
+    </Accordion>
+</AccordionGroup>
+
+## Quick Links
+
+<CardGroup cols={4}>
+  <Card
+    title="initOrg"
+    icon="code"
+    href="/widget-integration/methods/initOrg"
+    horizontal
+  >
+  </Card>
+  <Card
+    title="initUser"
+    icon="code"
+    href="/widget-integration/methods/initUser"
+    horizontal
+  >
+  </Card>
+  <Card
+    title="connect"
+    icon="code"
+    href="/widget-integration/methods/connect"
+    horizontal
+  >
+  </Card>
+  <Card
+    title="disconnect"
+    icon="code"
+    href="/widget-integration/methods/disconnect"
+    horizontal
+  >
+  </Card>
+</CardGroup>
