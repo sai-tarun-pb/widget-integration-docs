@@ -4,11 +4,11 @@ sidebarTitle: 'connect'
 description: ''
 ---
 
-### `connect`: PingBase("connect", widgetOptions?)
+### `connect` : OverhypedAI("connect", widgetOptions?)
 
-* This method allows you to programmatically show the PingBase integration in your web app.
+* This method allows you to programmatically show the OverhypedAI integration in your web app.
 * Use the `connect` method only if you have set `autoConnect` to `false` in the `initOrg` command options.
-* Invoke this method whenever you want to display the PingBase integration in your web app after using the `initOrg` and `initUser` commands.
+* Invoke this method whenever you want to display the OverhypedAI integration in your web app after using the `initOrg` and `initUser` commands.
 
 ```typescript
 // NOTE: This is an optional parameter.
@@ -26,12 +26,14 @@ const widgetOptions = {
 ```
 
 ```typescript {3}
-import PingBase from '@pingbase/connect/PingBase';
+import OverhypedAI from '@overhyped-ai/connect/OverhypedAI';
 
-PingBase("connect", widgetOptions)
+OverhypedAI("connect", widgetOptions)
 ```
 
-Connects the user to PingBase. This is used only when `autoConnect` is set to `false`.  Params:
+Connects the user to OverhypedAI. This is used only when `autoConnect` is set to `false`.  Params:
+
+<Tip>Tag (Optional) is added for non-mandatory fields</Tip>
 
 * `widgetOptions: object` (Optional): Options to customize the widget.
   * `positionOffset: object` (Optional): Adjust the position of the widget relative to it's initial position.

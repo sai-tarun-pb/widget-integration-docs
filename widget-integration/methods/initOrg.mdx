@@ -4,9 +4,9 @@ sidebarTitle: 'initOrg'
 description: ''
 ---
 
-### `initOrg`: PingBase("initOrg", orgKey, options?)
+### `initOrg` : OverhypedAI("initOrg", orgKey, options?)
 
-This method should be called only once when any user comes to the platform to initialize the organization with PingBase.
+This method should be called only once when any user comes to the platform to initialize the organization with OverhypedAI.
 
 ```typescript
 // NOTE: This is an optional parameter.
@@ -14,7 +14,7 @@ const options = {
     /**
     * This is used to specify whether to connect the user
     * directly when the initUser command is called. If set to false,
-    * you need to connect the user explicitly using PingBase("connect")
+    * you need to connect the user explicitly using OverhypedAI("connect")
     *
     * Defaults to true.
     */
@@ -23,13 +23,15 @@ const options = {
 ```
 
 ```typescript {3}
-import PingBase from '@pingbase/connect/PingBase';
+import OverhypedAI from '@overhyped-ai/connect/OverhypedAI';
 
-PingBase("initOrg", "ORG_TOKEN", options)
+OverhypedAI("initOrg", "ORG_TOKEN", options)
 ```
 
 Initializes the organization for connection. Params:
 
-* `orgKey: string`: A unique token given at the time of organization onboarding.
+<Tip>Tag (Optional) is added for non-mandatory fields</Tip>
+
+* `orgKey: string` : A unique token given at the time of organization onboarding.
 * `options: object` (Optional): Additional options to customize.
-  * `autoConnect: boolean = true` (Optional): Specifies whether to connect the user directly when the `initUser` command is called. If set to false, you need to connect the user explicitly using `PingBase("connect")`.
+  * `autoConnect: boolean = true` (Optional): Specifies whether to connect the user directly when the `initUser` command is called. If set to false, you need to connect the user explicitly using `OverhypedAI("connect")`.

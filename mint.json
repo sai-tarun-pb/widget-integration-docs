@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "PingBase",
+  "name": "Overhyped AI",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -21,7 +21,7 @@
   "topbarLinks": [
     {
       "name": "Homepage",
-      "url": "https://www.pingbase.ai"
+      "url": "https://www.overhyped.ai"
     }
   ],
   "tabs": [],

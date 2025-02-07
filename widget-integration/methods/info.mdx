@@ -3,7 +3,7 @@ title: Methods and it's uses
 description: ''
 ---
 
-We have exposed several methods to initialize the organization, initialize the user, connect, or disconnect PingBase.
+We have exposed several methods to initialize the organization, initialize the user, connect, or disconnect OverhypedAI.
 
 ## Methods:
 
@@ -13,9 +13,9 @@ We have exposed several methods to initialize the organization, initialize the u
 
     Usage:
     ```typescript {3}
-import PingBase from '@pingbase/connect/PingBase';
+import OverhypedAI from '@overhyped-ai/connect/OverhypedAI';
 
-PingBase("initOrg", "ORG_TOKEN", options?)
+OverhypedAI("initOrg", "ORG_TOKEN", options?)
 ```
 
 Detailed Description:
@@ -33,9 +33,9 @@ Detailed Description:
 
     Usage:
     ```typescript {3}
-import PingBase from '@pingbase/connect/PingBase';
+import OverhypedAI from '@overhyped-ai/connect/OverhypedAI';
 
-PingBase("initUser", "email", "firstName", "lastName", "trialType", customMetadata?, widgetOptions?)
+OverhypedAI("initUser", identifier, customMetadata, widgetOptions?)
 ```
 
 Detailed Description:
@@ -49,13 +49,13 @@ Detailed Description:
   </Card>
     </Accordion>
     <Accordion title="connect">
-    `connect` : Connects the user to PingBase. This is used only when `autoConnect` option in `initOrg` is set to `false`.
+    `connect` : Connects the user to OverhypedAI. This is used only when `autoConnect` option in `initOrg` is set to `false`.
 
     Usage:
     ```typescript {3}
-import PingBase from '@pingbase/connect/PingBase';
+import OverhypedAI from '@overhyped-ai/connect/OverhypedAI';
 
-PingBase("connect", widgetOptions?)
+OverhypedAI("connect", widgetOptions?)
 ```
 
 Detailed Description:
@@ -65,17 +65,17 @@ Detailed Description:
     href="/widget-integration/methods/connect"
     horizontal
   >
-    Connects the user to PingBase. This is used only when `autoConnect` option in `initOrg` is set to `false`.
+    Connects the user to OverhypedAI. This is used only when `autoConnect` option in `initOrg` is set to `false`.
   </Card>
     </Accordion>
     <Accordion title="disconnect">
-    `disconnect`: Disconnects the user from PingBase. Can be used to hide the widget upon logout.
+    `disconnect` : Disconnects the user from OverhypedAI. Can be used to hide the widget upon logout.
 
     Usage:
     ```typescript {3}
-import PingBase from '@pingbase/connect/PingBase';
+import OverhypedAI from '@overhyped-ai/connect/OverhypedAI';
 
-PingBase("disconnect")
+OverhypedAI("disconnect")
 ```
 
 Detailed Description:
@@ -85,7 +85,7 @@ Detailed Description:
     href="/widget-integration/methods/disconnect"
     horizontal
   >
-    Disconnects the user from PingBase. Can be used to hide the widget upon logout.
+    Disconnects the user from OverhypedAI. Can be used to hide the widget upon logout.
   </Card>
     </Accordion>
 </AccordionGroup>

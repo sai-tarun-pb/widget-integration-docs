@@ -1,67 +1,74 @@
 ---
 title: Quick Start Guide
-description: 'Embed PingBase Connect into your Platform'
+description: 'Embed OverhypedAI Connect into your Platform'
 icon: "rocket"
 ---
 
-1. During the last step of organization onboarding, you will receive your unique "ORG_TOKEN" for your organization.
+1. During the last step of organization onboarding, you will receive unique `ORG_TOKEN` for your organization.
 2. Copy the script tag below and paste it at the top of the `<head></head>` tag in your web app HTML
 
 ```html index.html
-<script id="ping-base-script" type="text/javascript" src="https://pingbasecdn.blob.core.windows.net/pb-connect/prod/main.js" defer></script>
+<script id="overhyped-ai-script" type="text/javascript" src="https://overhypedcdn.blob.core.windows.net/oai-connect/prod/main.js" defer></script>
 ```
 
-3. Integrate PingBase into your web app
+3. Integrate OverhypedAI into your web app
 
-Installing pingbase connect using NPM or Yarn
+Installing OverhypedAI connect using NPM or Yarn
 
 <CodeGroup>
     ```bash NPM
-npm install @pingbase/connect
+npm install @overhyped-ai/connect
 ```
 
     ```bash Yarn
-yarn install @pingbase/connect
+yarn install @overhyped-ai/connect
 ```
 </CodeGroup>
 
-## Importing and using PingBase widget in your web app
+## Importing and using OverhypedAI widget in your web app
 
-Once you have installed the package using NPM or Yarn, you can import PingBase using the code below
+Once you have installed the package using NPM or Yarn, you can import OverhypedAI using the code below
 
 ```typescript
-import PingBase from '@pingbase/connect/PingBase';
+import OverhypedAI from '@overhyped-ai/connect/OverhypedAI';
 ```
 
 #### Sample Usage:
 
 ```typescript
-import PingBase from '@pingbase/connect/PingBase';
+import OverhypedAI from '@overhyped-ai/connect/OverhypedAI';
 
 // Assuming that onMount is called on first render
 const onMount = () => {
-    PingBase("initOrg", <ORG_TOKEN>, {
+    OverhypedAI("initOrg", <ORG_TOKEN>, {
         autoConnect: false
     })
 }
 
 // Assuming that onLogin is called once user login to your webapp
 const onLogin = () => {
-    PingBase("initUser", "name@company.com", "Roger", "Federer", "Free Trial", {
-        role: "User Role",
-        company: "User Company",
-        isNewUser: true,
-    })
+    OverhypedAI(
+        "initUser",
+        { type: "email", value: "name@company.com" },
+        {
+            subscriptionPlan: "Free Trial",
+            firstName: "John",
+            lastName: "Doe",
+            role: "User Role",
+            company: "User Company",
+            isNewUser: true,
+        }
+    )
 }
 
 // Assuming that onShow is called once user login to your webapp and onLogin is called.
 const onShow = () => {
-    PingBase("connect")
+    OverhypedAI("connect")
 }
 
 // Assuming that onHide is called whenever you want to disconnect the user. Ex: onLogout
 const onHide = () => {
-    PingBase("disconnect")
+    OverhypedAI("disconnect")
 }
 ```
 
