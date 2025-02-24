@@ -26,11 +26,10 @@ const customMetadata = {
     role?: string
     company?: string
     /**
-     * Determines whether the user is a new user or returning user.
-     *
-     * Defaults to false.
+     * The user's creation date in ISO 8601 format (e.g., "2025-11-15T09:00:00.000Z").
+     * If provided, users created before the widget integration will not see the Activation modal.
      */
-    isNewUser?: boolean
+    userCreatedAt?: string
 }
 -----------------------------------------
 // NOTE: This is an optional parameter.
@@ -66,7 +65,7 @@ Initializes the user for connection. This should be called upon user login. Para
   * `lastName: string` (Optional): Last Name of the user.
   * `role: string` (Optional): Role of the user in their company.
   * `company: string`  (Optional):  Company of the user.
-  * `isNewUser: boolean`  (Optional):  User is a new user.
+  * `userCreatedAt: string`  (Optional):  User's creation date in ISO 8601 format (e.g., `2025-11-15T09:00:00.000Z`). This is used to hide the Activation modal for existing users(users created before the widget integration).
 * `widgetOptions: object` (Optional): Options to customize the widget.
   * `positionOffset: object` (Optional): Adjust the position of the widget relative to it's initial position.
     * `x: number | string`  (Optional):  X-axis offset.
