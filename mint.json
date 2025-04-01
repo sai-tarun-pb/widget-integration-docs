@@ -7,13 +7,9 @@
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#34A974",
-    "light": "#49c78e",
-    "dark": "#288259",
-    "anchors": {
-      "from": "#288259",
-      "to": "#49c78e"
-    }
+    "primary": "#5E17EB",
+    "light": "#C1FF72",
+    "dark": "#5E17EB"
   },
   "background": {
     "style": "windows"
@@ -63,5 +59,8 @@
   "footerSocials": {},
   "metadata": {
     "robots": "noindex"
+  },
+  "codeBlock": {
+    "mode": "auto"
   }
 }
