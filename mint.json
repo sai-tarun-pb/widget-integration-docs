@@ -50,6 +50,7 @@
             "widget-integration/methods/initOrg",
             "widget-integration/methods/initUser",
             "widget-integration/methods/connect",
+            "widget-integration/methods/updateOptions",
             "widget-integration/methods/disconnect"
           ]
         }

@@ -3,7 +3,7 @@ title: Methods and it's uses
 description: ''
 ---
 
-We have exposed several methods to initialize the organization, initialize the user, connect, or disconnect OverhypedAI.
+We have exposed several methods to initialize the organization, initialize the user, connect, updateOptions or disconnect OverhypedAI.
 
 ## Methods:
 
@@ -68,6 +68,26 @@ Detailed Description:
     Connects the user to OverhypedAI. This is used only when `autoConnect` option in `initOrg` is set to `false`.
   </Card>
     </Accordion>
+    <Accordion title="updateOptions">
+    `updateOptions` : Updates the initial options provided in `initUser` or `connect`(If `autoConnect: false` is provided in `initOrg`).
+
+    Usage:
+    ```typescript {3}
+import OverhypedAI from '@overhyped-ai/connect/OverhypedAI';
+
+OverhypedAI("updateOptions", config)
+```
+
+Detailed Description:
+<Card
+    title="updateOptions"
+    icon="code"
+    href="/widget-integration/methods/updateOptions"
+    horizontal
+  >
+    Updates the initial options provided in `initUser` or `connect`(If `autoConnect: false` is provided in `initOrg`).
+  </Card>
+    </Accordion>
     <Accordion title="disconnect">
     `disconnect` : Disconnects the user from OverhypedAI. Can be used to hide the widget upon logout.
 
@@ -92,7 +112,7 @@ Detailed Description:
 
 ## Quick Links
 
-<CardGroup cols={4}>
+<CardGroup cols={2}>
   <Card
     title="initOrg"
     icon="code"
@@ -111,6 +131,13 @@ Detailed Description:
     title="connect"
     icon="code"
     href="/widget-integration/methods/connect"
+    horizontal
+  >
+  </Card>
+  <Card
+    title="updateOptions"
+    icon="code"
+    href="/widget-integration/methods/updateOptions"
     horizontal
   >
   </Card>

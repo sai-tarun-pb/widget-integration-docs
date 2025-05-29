@@ -1,0 +1,50 @@
+---
+title: connect - Upates the initial options
+sidebarTitle: 'updateOptions'
+description: ''
+---
+
+### `updateOptions` : OverhypedAI("updateOptions", config)
+
+- This method allows you to programmatically update the initial options provided in `initUser` or `connect`(If `autoConnect: false` is provided in `initOrg`).
+- Invoke this method after using the `initOrg`, `initUser` and `connect`(If `autoConnect: false` is provided in `initOrg`) commands.
+
+```typescript
+const widgetOptions = {
+  show?: boolean
+  positionOffset?: {
+      x?: number | string
+      y?: number | string
+  }
+}
+// NOTE: This is a MANDATORY parameter.
+const config = {
+  /**
+   * The target to update the options for.
+   * Currently only 'widget' is supported.
+   */
+  target: "widget",
+  /**
+   * The options to update.
+   */
+  options: widgetOptions
+}
+```
+
+```typescript {3}
+import OverhypedAI from '@overhyped-ai/connect/OverhypedAI'
+
+OverhypedAI('updateOptions', config)
+```
+
+Updates the initial widgetOptions. Params:
+
+<Tip>Tag (Optional) is added for non-mandatory fields</Tip>
+
+- `options: object` (Optional): Options to customize the widget.
+  - `target: "widget"`: The target to update the options for. Currently only 'widget' is supported.
+  - `options: Partial<OverhypedAIWidgetOptions>`: The options to update.
+    - `show: boolean` (Optional): Show/Hide the widget initially. This has no effect on the modal.
+    - `positionOffset: object` (Optional): Adjust the position of the widget relative to it's initial position.
+      - `x: number | string` (Optional): X-axis offset.
+      - `y: number | string` (Optional): Y-axis offset.
