@@ -1,5 +1,5 @@
 ---
-title: connect - Upates the initial options
+title: updateOptions - Upates the initial options
 sidebarTitle: 'updateOptions'
 description: ''
 ---
@@ -37,14 +37,14 @@ import OverhypedAI from '@overhyped-ai/connect/OverhypedAI'
 OverhypedAI('updateOptions', config)
 ```
 
-Updates the initial widgetOptions. Params:
+Updates the initial options. Params:
 
 <Tip>Tag (Optional) is added for non-mandatory fields</Tip>
 
-- `options: object` (Optional): Options to customize the widget.
+- `config: object`: Target and options to update.
   - `target: "widget"`: The target to update the options for. Currently only 'widget' is supported.
   - `options: Partial<OverhypedAIWidgetOptions>`: The options to update.
-    - `show: boolean` (Optional): Show/Hide the widget initially. This has no effect on the modal.
+    - `show: boolean` (Optional): Show/Hide the widget. This has no effect on the modal.
     - `positionOffset: object` (Optional): Adjust the position of the widget relative to it's initial position.
       - `x: number | string` (Optional): X-axis offset.
       - `y: number | string` (Optional): Y-axis offset.
